@@ -18,7 +18,7 @@ Output:
  * @param    {number} num - the number sheep 
  * @returns  
  * @display  displays how many sheep jumped over the fence
- * @Big O    O(n) - Linear time
+ * @Big O    O(n) - Linear time because the number of recursive calls is directly proportional to the number of sheep passed in.
  */
 
 let tick = 0;
@@ -46,7 +46,7 @@ handful of different arrays. For example,
 Input: [1, 2, 3]
 Output: [2, 4, 6]
 
-@Big O    O(n) - Linear time 
+@Big O    O(n) - Linear time because the greater the length of the array, the more times the recursive function will be called.
 */
 function double_all(arr) {
 
@@ -65,7 +65,7 @@ reverse the string, and return the new string.
 Input: 'tauhida'
 Output: adihuat
 
-@Big O    O(n) - Linear time 
+@Big O    O(n) - Linear time because as the length of the string icreases, so will the number of recursive calls.
 */
 
 function reverseString(str) {
@@ -97,7 +97,7 @@ This is the Triangular Number Sequence: 1, 3, 6, 10, 15, 21, 28, 36, 45
 Input: 5
 Output: 15
 
-@Big O    O(n) - Linear time 
+@Big O    O(n) - Linear time because the number of recursive calls will increase as the dots per side (n) increase.
 */
 //Should always return n*(n+1)/2
 function triangle(n) {
@@ -114,7 +114,7 @@ Split a string based upon a separator (similar to String.prototype.split).
 Input: '1/21/2018'
 Output: 1212018 OR ["1", "21", "2018"]
 
-@Big O    O(n) - Linear time 
+@Big O    O(n) - Linear time because the number of recursive calls increase as the length of the array or string increases
 */
 function split(str, sep) {
   var idx = str.indexOf(sep);
@@ -139,7 +139,7 @@ and print 11001 as an output. Note that the binary representation of 0 should be
 Input: 25
 Output: 11001
 
-Big O   O(log(n)) - Logarithmic Time
+Big O   O(n) - Linear Time because the number of recursive calls increases as the input number increases.
 */
 function convertToBinary(num){
   if(num>0){
@@ -181,6 +181,7 @@ Continue this way until you find all the anagrams for east. There should be 24 o
 Input: 
 Output: 
 
+Big O   O(n) - Linear Time bcause as the lenght of the string increases, so do the number of loops and recursive calls.
 */
 
 function anagrams(prefix, str){
