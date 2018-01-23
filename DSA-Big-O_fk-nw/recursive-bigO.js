@@ -260,6 +260,8 @@ The sequence looks as follows: 1 1 2 3 5 8 13.
 
 Input: 7
 Output: 13
+
+Big O   O(2^n) - Exponential Time because with every increase of n, 2^n recursive calls will be made.
 */
 function fibonacci(n) {
   // Base case
