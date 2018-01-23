@@ -2,7 +2,7 @@
 
 
 // ===== EVEN or ODD ===== //
-//O(1) Constant Time because it has two constant operations
+//O(1) Constant Time
 
 function isEven(value){
   if (value % 2 == 0){
@@ -87,4 +87,57 @@ function generateFib(num) {
   // once the for loop finishes
   // we return `result`.
   return result;
+}
+
+// ===== AN EFFICIENT SEARCH ===== //
+// assume input array is always sorted
+// O(log(n))  Logarithmic Time
+
+function efficientSearch(array, item) {
+  let minIndex = 0;
+  let maxIndex = array.length - 1;
+  let currentIndex;
+  let currentElement;
+
+  while (minIndex <= maxIndex) {
+      currentIndex = Math.floor((minIndex + maxIndex) / 2);
+      currentElement = array[currentIndex];
+
+      if (currentElement < item) {
+          minIndex = currentIndex + 1;
+      }
+      else if (currentElement > item) {
+          maxIndex = currentIndex - 1;
+      }
+      else {
+          return currentIndex;
+      }
+  }
+  return -1;
+}
+
+
+// ===== RANDOM ELEMENT ===== //
+//O(1) Constant Time
+
+function findRandomElement(arr) {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
+
+
+// ===== IS IT PRIME ===== //
+// O(1) Constant time: best case
+// O(n) Linear time: worst case
+
+function isPrime(n) {
+  // if n is less than 2 or a decimal, it's not prime
+  if (n < 2 || n % 1 != 0) {
+      return false;
+  }
+  // otherwise, check if `n` is divisible by any integer
+  // between 2 and n.
+  for (let i = 2; i < n; ++i) {
+      if (n % i == 0) return false;
+  }
+  return true;
 }
